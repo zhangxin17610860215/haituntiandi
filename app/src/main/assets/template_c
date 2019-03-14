@@ -1,0 +1,14 @@
+package haituntiandi.com.haituntiandi.app.{$name};
+
+import haituntiandi.com.haituntiandi.base.BasePresenter;
+import haituntiandi.com.haituntiandi.base.BaseView;
+
+public interface {$Name}Contract {
+
+    interface View extends BaseView {
+
+    }
+
+    interface Presenter extends BasePresenter {
+    }
+}

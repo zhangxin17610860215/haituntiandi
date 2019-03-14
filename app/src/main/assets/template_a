@@ -1,0 +1,17 @@
+package haituntiandi.com.haituntiandi.app.{$name};
+
+import haituntiandi.com.haituntiandi.base.BaseActivity;
+import haituntiandi.com.haituntiandi.R;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+
+public class {$Name}Activity extends BaseActivity implements {$Name}Contract.View {
+
+    private {$Name}Presenter presenter;
+
+    @Override
+    public void initPresenter() {
+        presenter = new {$Name}Presenter(this);
+    }
+
+}

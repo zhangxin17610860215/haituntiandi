@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+    <TextView
+        android:id="@+id/tv_geren"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="个人" />
+    <TextView
+        android:id="@+id/tv_wxPay"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="微信支付"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_AliPay"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="支付宝支付"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_WXLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="微信登录"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/tv_WXShare"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="微信分享"
+        android:gravity="center"/>
+</LinearLayout>
