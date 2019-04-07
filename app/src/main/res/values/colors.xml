@@ -7,6 +7,8 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="text_33">#333333</color>
+    <color name="text_66">#666666</color>
+    <color name="text_99">#999999</color>
     <color name="global_black">#1D1D1D</color>
     <color name="dividing_line">#E8E8E8</color>
     <color name="dividing_strip">#F3F3F3</color>
