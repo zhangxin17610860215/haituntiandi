@@ -35,12 +35,12 @@ public class MVPCodeGenerator {
     private static void addMVP() throws Exception {
 
         List<String> models = new ArrayList<>();
-        models.add("BusinessBean");
+        models.add("SettingReceivingAddress");
 
         String app = "app";
-        String packageName = "zhangxin.com.myoneproject";
+        String packageName = "haituntiandi.com.haituntiandi";
 //        String projectPath = "D:/TAMC_Wallet/TamcWallet";
-        String projectPath = "E:\\Android\\MyOneProject"; // 此处换成当前项目所在根目录
+        String projectPath = "E:\\Android\\Project\\haituntiandi"; // 此处换成当前项目所在根目录
         String templatePath = projectPath + "/app/src/main/assets/";
         String aPath = projectPath + "/app/src/main/java/" + packageName.replaceAll("\\.", "/") + "/" + app;
         String cPath = projectPath + "/app/src/main/java/" + packageName.replaceAll("\\.", "/") + "/" + app;

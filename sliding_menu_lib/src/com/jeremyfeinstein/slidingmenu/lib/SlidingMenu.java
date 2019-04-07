@@ -1019,4 +1019,8 @@ public class SlidingMenu extends RelativeLayout {
 		}
 	}
 
+	public void setOffsetFadeDegree(float f) {
+		mViewBehind.setOffsetFadeDegree(f);
+	}
+
 }

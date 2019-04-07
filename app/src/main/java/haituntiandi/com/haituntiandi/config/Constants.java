@@ -2,6 +2,8 @@ package haituntiandi.com.haituntiandi.config;
 
 import java.util.HashMap;
 
+import haituntiandi.com.haituntiandi.MyApplication;
+import haituntiandi.com.haituntiandi.utils.AppUtils;
 import haituntiandi.com.haituntiandi.utils.EventBusUtils;
 
 public class Constants {
@@ -13,12 +15,12 @@ public class Constants {
 
     public static Integer GOOTCSELLING = EventBusUtils.EVENT_CHANGE_GOOTCBUY;
 
-    public static final String ERROR_REQUEST_FAILED = "-1"; // 网络请求失败，出现onerror
-    public static final String ERROR_REQUEST_EXCEPTION = "-2"; // 网络请求失败，出现异常
-
     public static final String ERROR_REQUEST_FAILED_MESSAGE = "网络请求失败";//REQUEST_FAILED"; // 网络请求失败，出现onerror
     public static final String ERROR_REQUEST_EXCEPTION_MESSAGE = "服务返回数据异常";//REQUEST_EXCEPTION"; // 网络请求数据异常
+    public static final int VERSIONCODE  = AppUtils.getCurrentVersion(MyApplication.getInstance()).versionCode;//当前版本号
 
+    public static final int SUCCESS_CODE = 0;//REQUEST_EXCEPTION"; // 网络请求成功的code值
+    public static String HTTDSIGNKEY = "";
     //订单状态 10.待支付  11.取消  12.支付确认中  20.完成
     public static final HashMap<String, String> ORDER_STATUS_TYPE = new HashMap<>();
 

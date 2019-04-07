@@ -52,6 +52,7 @@ public class MyApplication extends Application {
 
     private void initOkGo() {
         HttpHeaders headers = new HttpHeaders();
+//        headers.put();
         HttpParams params = new HttpParams();
         //----------------------------------------------------------------------------------------//
 

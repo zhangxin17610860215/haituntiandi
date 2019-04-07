@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import com.umeng.analytics.MobclickAgent;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import haituntiandi.com.haituntiandi.MyApplication;
 import haituntiandi.com.haituntiandi.utils.LogUtil;
 
@@ -29,7 +30,7 @@ public abstract class BaseActivity extends FragmentActivity {
     private boolean isDebug;
     private String APP_NAME;
     protected final String TAG = this.getClass().getSimpleName();
-
+    Unbinder unbinder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public abstract class BaseActivity extends FragmentActivity {
             } else {
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
-            ButterKnife.bind(this);
+            unbinder = ButterKnife.bind(this);
             initView(mContextView);
             initData(this);
         } catch (Exception e) {
@@ -180,6 +181,9 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (null != unbinder){
+            unbinder.unbind();
+        }
     }
 
     /**

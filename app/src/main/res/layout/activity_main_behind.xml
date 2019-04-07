@@ -1,15 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#235"
-    android:orientation="vertical">
+    android:background="@color/white">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rl_behind_top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="我是侧滑栏"
-        android:textColor="#FFF"/>
+        android:layout_height="wrap_content"
+        android:paddingLeft="19dp"
+        android:paddingTop="24dp">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/iv_behind_head"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tv_behind_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="19dp"
+            android:layout_toRightOf="@+id/iv_behind_head"
+            android:text="欧阳下沉"
+            android:textColor="@color/global_black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_behind_isVIP"
+            android:layout_width="39dp"
+            android:layout_height="18dp"
+            android:layout_toRightOf="@+id/tv_behind_name"
+            android:src="@mipmap/vip_icon" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_behind_name"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/iv_behind_head">
+            <ProgressBar
+                android:id="@+id/mProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="109dp"
+                android:layout_height="11dp"
+                android:progressDrawable="@drawable/progress_bar"
+                android:max="10"
+                android:progress="5" />
+            <TextView
+                android:id="@+id/tv_behind_VIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:text="V30"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_behind_JiFenNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_mProgressBar"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_marginRight="-3dp"
+            android:layout_toRightOf="@+id/iv_behind_head"
+            android:text="当前12335积分"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_behind"
+        android:layout_below="@+id/rl_behind_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/dividing_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_behind_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividing_line" />
+        <TextView
+            android:id="@+id/tv_tequan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="—我的特权—"
+            android:textSize="13sp"
+            android:textColor="@color/global_black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv_tequan"
+            android:layout_marginTop="19dp">
+            <TextView
+                android:id="@+id/tv_behind_JiChangVIP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="机场VIP"
+                android:drawableTop="@mipmap/feiji"
+                android:drawablePadding="7dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_behind_ShengRiFuLi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="生日福利"
+                android:drawableTop="@mipmap/shenghuofuli"
+                android:drawablePadding="7dp"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tv_behind_GengDuo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="更多"
+                android:drawableTop="@mipmap/gengduo"
+                android:drawablePadding="7dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/view_behind"
+        android:layout_above="@+id/rl_behind_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="54dp"
+            android:paddingBottom="54dp">
+            <TextView
+                android:id="@+id/tv_behind_myOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="我的订单"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_myWish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="我的心愿"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_myDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="我的优惠"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_myMessger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="我的消息"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_myData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="我的资料"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_myCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="专属客服"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_behind_mySetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="36dp"
+                android:text="设         置"
+                android:textColor="@color/global_black"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
